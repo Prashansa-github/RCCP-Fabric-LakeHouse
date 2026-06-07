@@ -17,6 +17,21 @@
 
 ---
 
+## Architecture Overview
+
+### Data Pipeline Architecture
+
+![RCCP Architecture Pipeline](assets/rccp-architecture-pipeline.png)
+
+**Pipeline Flow:**
+1. **Data Sources** → Excel files & SharePoint folders (84 weekly reports)
+2. **Data Transformation** → DataFlow Gen2 with parameterized extraction logic
+3. **Business Logic** → Transform & Calculate with Power Query functions
+4. **Fabric LakeHouse** → Load consolidated fact table
+5. **Visualization** → Power BI dashboard with business metrics
+
+---
+
 ## Quick Start (2 Minutes)
 
 ### What This Does
