@@ -255,8 +255,8 @@ ARCHITECTURE:
 - ✅ Advanced Power Query (parameterized functions, List operations)
 - ✅ Problem-solving at scale (84 files → 1 consolidated table)
 - ✅ Architectural thinking (reusable components)
-- ✅ Business impact (60% improvement, 95% code reduction)
 - ✅ Data governance (validation, quality assurance)
+- ✅ Operational efficiency (60% time reduction, 100% accuracy)
 
 **Interview Talking Points:**
 ```
@@ -282,7 +282,6 @@ weeks, we just change the function call parameters."
 - **I want to understand the technical approach:** Read [ARCHITECTURE.md](docs/ARCHITECTURE.md)
 - **I want to see the Power Query code:** Read [POWER_QUERY_IMPLEMENTATION.md](docs/POWER_QUERY_IMPLEMENTATION.md)
 - **I want to replicate this:** Read [SETUP_INSTRUCTIONS.md](docs/SETUP_INSTRUCTIONS.md)
-- **I want to validate the data:** See [sql/](sql/) folder for validation scripts
 
 ---
 
@@ -295,25 +294,13 @@ RCCP-Fabric-Lakehouse/
 │
 ├── docs/
 │   ├── ARCHITECTURE.md (Technical deep-dive)
-│   ├── PERFORMANCE_METRICS.md (Results, impact, ROI)
+│   ├── PERFORMANCE_METRICS.md (Results, impact)
 │   ├── DATA_MODEL.md (Fact table schema)
 │   └── TROUBLESHOOTING.md (Common issues)
 │
 ├── power-query/
 │   ├── LoadAndReplicateByWeek.m (The parameterized function)
 │   └── IMPLEMENTATION_GUIDE.md (How to use the function)
-│
-├── sql/
-│   ├── 01_validate_data_quality.sql (Row counts, nulls)
-│   ├── 02_exploratory_analysis.sql (Sample queries, aggregations)
-│   └── README.md (What these scripts do)
-│
-├── power-bi/
-│   ├── Dashboard_Design.md (UI/UX approach)
-│   └── KPI_Definitions.md (Each metric explained)
-│
-├── config/
-│   └── SETUP_INSTRUCTIONS.md (How to replicate in your environment)
 │
 └── assets/
     ├── dashboard-screenshot.png

@@ -1,4 +1,4 @@
-# RCCP Capacity Planning: Performance Metrics & Business Impact
+# RCCP Capacity Planning: Performance Metrics & Results
 
 ## Executive Summary
 
@@ -6,8 +6,6 @@
 **Code Efficiency:** 95% reduction in transformation code (100+ lines → 12 lines + 1 function)  
 **Data Quality:** 100% automated validation, zero transcription errors  
 **Scalability:** Infinite scaling for new weeks (no additional code required)  
-
-**Annual ROI:** $14,400-19,200 in labor savings + error prevention
 
 ---
 
@@ -28,17 +26,6 @@
 | | **~7 hours** | **15 min** | **6.75 hours** | **96%** |
 
 **Practical Weekly Time Savings: 6+ hours**
-
-### Annual Impact (Assuming 52 weeks/year)
-
-```
-Weekly savings: 6+ hours
-Annual savings: 6.5 hours × 52 = 338 hours/year
-At $30/hour: 338 × $30 = $10,140/year
-At $40/hour: 338 × $40 = $13,520/year
-```
-
-**Annual Labor Savings: $10,140 - $13,520**
 
 ---
 
@@ -123,9 +110,7 @@ Week 1 Report:
 - Formula errors: 0-1 instances
 ─────────────────────────────────
 Expected errors per week: 4-9 errors
-Error detection rate: 60% (some missed until customer notices)
-Error resolution time: 1-2 hours per error
-Annual cost of errors: $5,000-10,000
+Error detection rate: 60% (some missed until issues arise)
 ```
 
 ### After: Automated Process
@@ -139,22 +124,19 @@ Week 1 Report:
 ─────────────────────────────────
 Expected errors per week: 0 errors
 Error detection rate: 100% (system validates)
-Error resolution time: 0 hours per error
-Annual cost of errors: $0
+Error correction: Automatic (no manual intervention)
 ```
 
-### Error Prevention ROI
+### Error Prevention
 
 ```
 BEFORE:
-Annual errors: ~400 (assuming 52 weeks × 8 errors avg)
-Cost per error to fix: $25-50 (labor + investigation)
-Annual error cost: $10,000-20,000
+Error rate: ~8 per week on average
+Data inconsistency: Variable across reports
 
 AFTER:
-Annual errors: 0
-Cost per error: $0
-Annual error prevention: $10,000-20,000 saved
+Error rate: 0 per week
+Data consistency: 100% uniform across reports
 ```
 
 ---
@@ -254,7 +236,7 @@ Report creation: 6+ hours
 Accuracy: 85% (15% have errors)
 Timeliness: 2 days late (due to time spent)
 Visibility: Single week at a time (hard to trend)
-Decisions: Made with 85% confidence
+Reliability: 85% (subject to human error)
 ```
 
 **After (Automated Reports):**
@@ -263,7 +245,7 @@ Report creation: 15 minutes
 Accuracy: 100% (zero manual errors)
 Timeliness: Same day (15 min vs 6+ hours)
 Visibility: All 51 weeks at once (easy to trend)
-Decisions: Made with 100% confidence
+Reliability: 100% (system-validated)
 ```
 
 ### Impact on Operations
@@ -275,80 +257,6 @@ Decisions: Made with 100% confidence
 | **Capacity visibility** | Limited | Complete | Better planning |
 | **Error-driven rework** | Weekly | Never | Less disruption |
 | **Executive confidence** | Medium | High | Trusted data |
-
----
-
-## Financial ROI Analysis
-
-### Cost-Benefit Summary
-
-```
-ANNUAL BENEFITS:
-
-1. Labor Savings (Time Reduction)
-   Weekly time saved: 6.5 hours
-   Annual: 338 hours
-   @ $30/hr: $10,140
-   @ $40/hr: $13,520
-   
-2. Error Prevention
-   Weekly errors: 8 → 0
-   Annual errors prevented: 400
-   Cost per error fix: $25-50
-   Annual savings: $10,000-20,000
-   
-3. Efficiency Gains (Better Decisions)
-   Earlier reports = faster decisions = less disruption
-   Estimated operational improvement: $2,000-5,000/year
-   
-TOTAL ANNUAL BENEFIT: $22,140-38,520
-
-IMPLEMENTATION COST:
-   Development: 40 hours @ $50/hr = $2,000
-   Testing: 8 hours @ $40/hr = $320
-   Training: 2 hours @ $30/hr = $60
-   Total one-time cost: $2,380
-
-PAYBACK PERIOD: ~1 month
-YEAR 1 ROI: 830%-1,620%
-YEAR 2+ ROI: 930%-1,620% (no implementation cost)
-```
-
----
-
-## Reliability & Consistency Metrics
-
-### System Uptime
-
-```
-RCCP System Availability:
-├─ Source files (SharePoint): 99.9%
-├─ Power Query (Fabric): 99.8%
-├─ Power BI Dashboard: 99.7%
-├─ Combined availability: 99.5%
-└─ Expected downtime: ~44 hours/year
-
-Maintenance windows: None required
-Self-service refreshes: Yes
-```
-
-### Data Consistency
-
-```
-BEFORE:
-Coordinator A created report: 127 jobs
-Coordinator B created report: 129 jobs (2 jobs missed)
-Coordinator C created report: 126 jobs (1 typo)
-
-Result: Reports don't match, reconciliation needed
-
-AFTER:
-Report created by system: 127 jobs
-Report refreshed next day: 127 jobs
-Report refreshed next week: 127 jobs
-
-Result: Consistent, auditable, reliable
-```
 
 ---
 
@@ -369,7 +277,7 @@ Parameterized function approach: 1 reusable function
 ├─ Shows advanced Power Query skills (List operations)
 ├─ Demonstrates architectural thinking
 ├─ Scales infinitely (future-proof)
-├─ Result: Sr. developer/architect work
+└─ Result: Sr. developer/architect work
 ```
 
 ### Key Talking Points for Interviews
@@ -402,7 +310,6 @@ system that scales infinitely."
 | **Scaling** | Manual per week | Automatic | 100% automatic |
 | **Accuracy** | 85% | 100% | 15% improvement |
 | **Confidence** | Medium | High | 100% increase |
-| **Annual ROI** | N/A | $22K-38K | $22K-38K saved |
 
 ---
 
@@ -412,8 +319,7 @@ system that scales infinitely."
 ✅ **Accuracy:** Zero transcription errors (100% automated)  
 ✅ **Maintainability:** Single function definition, 12 calls  
 ✅ **Scalability:** Add weeks without code changes  
-✅ **ROI:** $22K-38K annual savings  
-✅ **Quality:** 840 rows, 100% validated, zero duplicates  
+✅ **Data Quality:** 840 rows, 100% validated, zero duplicates  
 
 ---
 
@@ -443,7 +349,6 @@ system that scales infinitely."
 
 **RCCP Capacity Planning Lakehouse** demonstrates:
 - ✅ **Technical Excellence:** Advanced Power Query, 95% code reduction
-- ✅ **Business Acumen:** $22K-38K annual ROI
 - ✅ **Engineering Discipline:** Reliable, tested, validated
 - ✅ **Scalability:** Future-proof architecture
 - ✅ **Practical Impact:** 60% time savings, 100% accuracy
@@ -454,4 +359,4 @@ system that scales infinitely."
 
 **View:** [ARCHITECTURE.md](ARCHITECTURE.md) for technical details  
 **View:** [POWER_QUERY_IMPLEMENTATION.md](POWER_QUERY_IMPLEMENTATION.md) for code walkthrough  
-**View:** [SETUP_INSTRUCTIONS.md](../../config/SETUP_INSTRUCTIONS.md) to implement
+**View:** [SETUP_INSTRUCTIONS.md](SETUP_INSTRUCTIONS.md) to implement
