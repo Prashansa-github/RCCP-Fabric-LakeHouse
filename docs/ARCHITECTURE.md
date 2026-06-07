@@ -340,7 +340,7 @@ ReplicatedTables = List.Transform(WeekList, (WeekNum) =>
 ### Query Optimization
 
 **Lazy Evaluation:** Power Query evaluates only when needed
-- Loading 84 files would be slow if done immediately
+- Loading all 12 files with unpivoted data would be slow if done immediately
 - Parameterized function delays execution until called
 
 **Materialization:** Once combined, data is materialized in Lakehouse
@@ -528,7 +528,7 @@ LoadColumn = Table.ColumnNames(Source,
 
 **RCCP Architecture:**
 - **Elegant Simplicity:** 1 parameterized function + 12 calls (95% code reduction)
-- **Enterprise Scale:** Consolidates 84 files into analyzable structure
+- **Enterprise Scale:** Consolidates 12 files (unpivoted to ~840 rows) into analyzable structure
 - **Reusable Pattern:** List.Generate + List.Transform + Table.Combine
 - **Production Ready:** Handles edge cases, validates data quality
 - **Future Proof:** Scales easily as requirements grow

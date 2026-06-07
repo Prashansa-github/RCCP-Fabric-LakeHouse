@@ -283,15 +283,15 @@ Parameterized function approach: 1 reusable function
 ### Key Talking Points for Interviews
 
 ```
-"The challenge wasn't just extracting data from 84 files.
+"The challenge wasn't just extracting data from 12 files (unpivoted to ~840 rows).
 It was designing a system that was:
 1. Maintainable (change logic once, applies everywhere)
 2. Scalable (add weeks without code changes)
 3. Reliable (automated validation, zero errors)
 4. Performant (runs in 2-3 minutes)
 
-I could have hard-coded 84 imports. Instead, I invested 
-time in designing a reusable pattern using List.Generate 
+I could have hard-coded 12 separate imports with duplicate transformation logic. 
+Instead, I invested time in designing a reusable pattern using List.Generate 
 and List.Transform.
 
 Result: 95% code reduction, 60% time savings, and a 

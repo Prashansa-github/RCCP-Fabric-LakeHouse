@@ -4,14 +4,14 @@
 
 ## Executive Summary
 
-**Problem:** 84 separate Excel files (W1-W84 weekly shop load reports) manually consolidated each week—error-prone, time-consuming, difficult to analyze.
+**Problem:** 12 Excel files (W1-W84 weekly shop load reports, unpivoted and nested) manually consolidated each week—error-prone, time-consuming, difficult to analyze.
 
-**Solution:** Automated Fabric Lakehouse with parameterized Power Query function consolidating 84 workflows into a single fact table, enabling enterprise-scale capacity planning analysis.
+**Solution:** Automated Fabric Lakehouse with parameterized Power Query function consolidating 12 files (with ~84 unpivoted sub-rows per file) into a single fact table, enabling enterprise-scale capacity planning analysis.
 
 **Impact:**
 - ⏱️ **60% faster report generation** (6+ hours → 2.4 hours)
-- 📊 **95% code reduction** (84 separate imports → 1 parameterized function)
-- 📈 **840 rows consolidated** from 84 tables with proper week-level granularity
+- 📊 **95% code reduction** (360 lines of duplicate code → 42-line parameterized function)
+- 📈 **840 rows consolidated** from 12 files via unpivoting and nesting logic
 - ✅ **100% data fidelity** (no manual transcription, automated validation)
 - 🔄 **Scalable architecture** (add weeks without adding code)
 
@@ -24,10 +24,10 @@
 ![RCCP Architecture Pipeline](assets/rccp-architecture-pipeline.png)
 
 **Pipeline Flow:**
-1. **Data Sources** → Excel files & SharePoint folders (84 weekly reports)
+1. **Data Sources** → 12 Excel files from SharePoint (W1-W84 weekly reports, unpivoted & nested)
 2. **Data Transformation** → DataFlow Gen2 with parameterized extraction logic
-3. **Business Logic** → Transform & Calculate with Power Query functions
-4. **Fabric LakeHouse** → Load consolidated fact table
+3. **Business Logic** → Transform & Calculate with Power Query functions (unpivoting, nesting)
+4. **Fabric LakeHouse** → Load consolidated fact table (840 rows from 12 files)
 5. **Visualization** → Power BI dashboard with business metrics
 
 ---
@@ -36,7 +36,7 @@
 
 ### What This Does
 
-Reads 84 weekly shop load reports (W1-W6, W7-W13, ... W77-W84) from SharePoint, transforms them using a parameterized Power Query function, and consolidates them into a single fact table in Microsoft Fabric Lakehouse.
+Reads 12 weekly shop load report files (W1-W84 organized into batches) from SharePoint, unpivots and nests the data using a parameterized Power Query function, and consolidates them into a single 840-row fact table in Microsoft Fabric Lakehouse.
 
 ### Dashboard Overview
 
@@ -118,9 +118,11 @@ Each file contains:
 ### High-Level Flow
 
 ```
-84 Excel Files (SharePoint)
+12 Excel Files (SharePoint)
+W1-W84 (unpivoted & nested)
         ↓
     [Power Query ETL]
+  (Unpivot & Nest Logic)
         ↓
 Parameterized Function:
 LoadAndReplicateByWeek()
@@ -128,7 +130,7 @@ LoadAndReplicateByWeek()
 12 Function Calls
 (W1-W6, W7-W13, ..., W77-W84)
         ↓
-Combined Dataset
+Consolidated Dataset
 (840 rows, clean structure)
         ↓
 [Fabric Lakehouse]

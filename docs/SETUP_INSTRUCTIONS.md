@@ -410,12 +410,12 @@ See dashboard screenshot in assets/ folder for layout example.
 
 ### Problem: Dataflow Takes Too Long
 
-**Cause:** Loading all 84 files at once
+**Cause:** Loading all 12 files with full unpivoted dataset
 
 **Solution:**
 1. Call function only for recent weeks:
    ```m
-   // Instead of all 84 weeks, load only last 8:
+   // Instead of all 12 files (W1-W84), load only last batch:
    W77_to_W84 = LoadWFile("W77 to W84.xlsx", 77, 84)
    ```
 2. Or split into separate dataflows:

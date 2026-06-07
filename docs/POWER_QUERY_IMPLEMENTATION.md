@@ -2,9 +2,9 @@
 
 ## Overview
 
-This guide explains the `LoadWFile` parameterized function that consolidates 84 weekly shop load reports into a single fact table.
+This guide explains the `LoadWFile` parameterized function that consolidates 12 Excel files (containing unpivoted data for W1-W84) into a single fact table with 840 rows.
 
-**Key Achievement:** One reusable function called 12 times = 95% code reduction vs. 84 separate queries.
+**Key Achievement:** One reusable function called 12 times = 95% code reduction vs. 12 separate queries with duplicate logic.
 
 ---
 
@@ -573,7 +573,7 @@ The `LoadWFile` function is powerful because it:
 ✅ **Scalable:** Add more weeks without code changes  
 ✅ **Maintainable:** Fix logic once, applies everywhere  
 
-**Result:** 95% code reduction vs. 84 separate queries.
+**Result:** 95% code reduction vs. 12 separate queries with duplicate transformation logic.
 
 ---
 
